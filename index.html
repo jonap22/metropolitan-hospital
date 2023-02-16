@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body>
+<body onload="document.getElementById('top-banner-logo').focus()">
     <!-- TOP BANNER -->
 	<header>
 		<div class="top-banner">
 			<!-- Top banner logo and cetificate images -->
-			<div class="top-banner-logo" title="Logo e imágenes de los certificados otorgados al Hospital Metropolitano">
+			<div id="top-banner-logo" class="top-banner-logo" title="Logo e imágenes de los certificados otorgados al Hospital Metropolitano">
 				<img src="./images/banner-logo.svg" alt="Logo del Hospital Metropolitano" />
 				<img src="./images/banner-medal.png" alt="Imagen de la medalla otorgada al Hospital Metropolitano por la aprobación de los estándares de calidad sugeridos por la Joint Commission International" />
 				<img src="./images/banner-certificate.jpg" alt="Imagen de la certificación de excelencia en atención centrada en la persona de Planetree International" />
@@ -24,19 +24,26 @@
 			
 			<!-- Top banner search bar -->
 			<div class="top-banner-search-bar">
-			  <input type="text" placeholder="Ingresa aquí tu consulta" title="Espacio para ingresar una consulta de búsqueda en la página" />
-			  <button type="submit" title="Botón para realizar una búsqueda en la página a partir de la consulta ingresada en el espacio respectivo">Buscar</button>
+			  <input id="search-input" type="text" placeholder="Ingrese aquí su consulta" title="Espacio para ingresar una consulta de búsqueda en la página" />
+			  <button type="submit" title="Botón para realizar una búsqueda en la página a partir de la consulta ingresada en el espacio respectivo" aria-label="Haga clic aquí para buscar la consulta ingresada">Buscar</button>
 			</div>
 			
 			<!-- Top banner user account -->
 			<div class="top-banner-user-account">
-				<a href="#" title="Enlace para ir hacia la cuenta de usuario para iniciar o cerrar sesión">
-					<img src="./images/user-account.jpg" alt="Ícono de la cuenta usuario" />		
-					<p>Cuenta de usuario</p>
+				<a href="#" title="Enlace para ir hacia la cuenta de usuario para iniciar o cerrar sesión" aria-label="Haga clic aquí para iniciar o cerrar sesión de la cuenta de usuario">
+					<img src="./images/user-account.jpg" alt="Ícono de usuario" aria-hidden="true" />		
+					<p aria-hidden="true">Cuenta de usuario</p>
 				</a>				
 			</div>
 		</div>
 	</header>
+	
+	<!-- Script to point the same label when recharging the page -->
+	<script>
+		window.addEventListener('load', function() {
+			location.hash = '#top-banner-logo';
+		});
+	</script>
 </body>
 
 </html>
