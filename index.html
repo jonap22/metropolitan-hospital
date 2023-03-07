@@ -9,12 +9,13 @@
 	
 	<link rel="shortcut icon" type="image/png" href="./images/favicon.png">
     <link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body onload="document.getElementById('top-banner-logo').focus()">
     <!-- TOP BANNER -->
 	<header>
-		<div class="top-banner">
+		<div class="top-banner bg-primary">
 			<!-- Top banner logo and cetificate images -->
 			<div id="top-banner-logo" class="top-banner-logo" title="Logo e imágenes de los certificados otorgados al Hospital Metropolitano">
 				<img src="./images/banner-logo.svg" alt="Logo del Hospital Metropolitano" />
@@ -31,7 +32,9 @@
 			<!-- Top banner user account -->
 			<div class="top-banner-user-account">
 				<a href="#" title="Enlace para ir hacia la cuenta de usuario para iniciar o cerrar sesión" aria-label="Haga clic aquí para iniciar o cerrar sesión de la cuenta de usuario">
-					<img src="./images/user-account.jpg" alt="Ícono de usuario" aria-hidden="true" />		
+					<span style="color: whitesmoke">
+						<i alt="ícono de usuario" class="fa-solid fa-3x fa-circle-user"></i>
+					</span>		
 					<p aria-hidden="true">Cuenta de usuario</p>
 				</a>				
 			</div>
@@ -41,7 +44,7 @@
 	<!-- GENERAL CONTAINER -->
 	<div class="general-container">
 	<!-- Left menu -->
-		<nav>
+		<nav class="my-nav bg-light">
 			<ul>
 				<li><a href="#" title="Enlace para ir hacia la página de inicio" aria-label="Haga clic aquí para ir hacia la página de inicio">Inicio</a></li>
 				<li><a href="#" title="Enlace para ir hacia la página de COVID-19" aria-label="Haga clic aquí para ir hacia la página de COVID-19">COVID-19</a></li>				
@@ -51,31 +54,31 @@
 				<li><a href="#" title="Enlace para ir hacia la página de especialidades" aria-label="Haga clic aquí para ir hacia la página de especialidades">Especialidades</a></li>				
 				<li><a href="#" title="Enlace para ir hacia la página de contactos" aria-label="Haga clic aquí para ir hacia la página de contactos">Contactos</a></li>
 			</ul>
-		  </nav>		  
+		</nav>		  
 		
 		<!-- CENTRAL CONTENT -->
-		<div class="central-content">
+		<div class="central-content bg-light">
 			<!-- MAIN CONTENT -->
-			<div class="main-content">
-				<h1>Bienvenidos al sitio web del Hospital Metropolitano</h1>
+			<div class="card text-center p-3 mb-2 main-content bg-primary">
+				<h1 class="text-light">Bienvenidos al sitio web del Hospital Metropolitano</h1>
 			</div>			
 			
 			<!-- FOOTER -->
-			<div class="footer">
+			<div class="footer bg-primary text-light">
 				<div class="footer-left">
 					<!-- Section of links of interest -->
 					<section>
-					  <h4>Enlaces de interés</h4>
-					  <ul>
-						<li><a href="#">Enlace 1</a></li>
-						<li><a href="#">Enlace 2</a></li>
-					  </ul>
+						<h4>Enlaces de interés</h4>
+						<ul class="section-list">
+							<li><a href="#">Enlace 1</a></li>
+							<li><a href="#">Enlace 2</a></li>
+						</ul>
 					</section>
 					
 					<!-- Section about us -->
 					<section>
 					  <h4>Sobre nosotros</h4>
-					  <ul>
+					  <ul class="section-list">
 						<li><a href="#">Enlace 3</a></li>
 						<li><a href="#">Enlace 4</a></li>
 					  </ul>
@@ -84,15 +87,15 @@
 					<!-- Section of accesibility options -->
 					<section>
 					  <h4>Accesibilidad</h4>
-					  <ul>
+					  <ul class="section-list">
 						<li><a href="#">Enlace 5</a></li>
 						<li><a href="#">Enlace 6</a></li>
 					  </ul>
 					</section>
 				</div>
 				
-				<div class="footer-right">
-					<h4>Medios de contacto</h4>
+				<div class="footer-right bg-primary">
+					<h4 class="text-light">Medios de contacto</h4>
 					<a href="#">
 						<img src="./images/user-account.jpg" alt=""/>	
 					</a>
@@ -105,7 +108,7 @@
 				</div>
 			</div>	
 			
-			<h5 class="copyright">Copyright JAR © 2023</h5>
+			<h5 class="copyright bg-primary text-light">Copyright JAR © 2023</h5>
 		</div>		
 	</div>
 	
@@ -115,6 +118,10 @@
 			location.hash = '#top-banner-logo';
 		});
 	</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/8f833f2473.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
